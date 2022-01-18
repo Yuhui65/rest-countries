@@ -7,9 +7,9 @@ async function render() {
     for (const itemElementItere of dataListPaysFormJson) {
         countryList += 
         `<tr>
-            <td class="text-nowrap">${itemElementItere.name.official}</td>
-            <td class=" text-end">${number.format(itemElementItere.area)}</td>
-            <td class=" text-end">${number.format(itemElementItere.population)}</td>
+            <th class="text-nowrap">${itemElementItere.name.official}</th>
+            <td class="text-end">${number.format(itemElementItere.area)}</td>
+            <td class="text-end">${number.format(itemElementItere.population)}</td>
             <td class="text-start text-nowrap">${itemElementItere.capital[0]}</td>
         </tr>`
     }
