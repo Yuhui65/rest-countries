@@ -4,15 +4,20 @@ async function render() {
 
     let countryList = "";
     for (const itemElementItere of dataListPaysFormJson) {
-        countryList +=
-        `<div class="card">
-            <a href=${itemElementItere.maps.openStreetMaps} target="_blank"><img src="${itemElementItere.flags.png}" class="card-img-top" alt=""></a>
-            <h5 class="card-title">${itemElementItere.name.official}</h5>
-            <h6 class="card-text">${itemElementItere.capital}</h6>
+        countryList += 
+        `<div>
+            <div class="card h-100">
+                <a href=${itemElementItere.maps.openStreetMaps} target="_blank"><img src="${itemElementItere.flags.png}" class="card-img-top" alt=""></a>
+                <div class="card-body">
+                <h5 class="card-title">${itemElementItere.name.official}</h5>
+                <h6 class="card-text">${itemElementItere.capital}</h6>
+                </div>
+            </div>
         </div>`            
-    }
+    };
 
-    document.querySelector("#cards-body").innerHTML = countryList;
+    document.querySelector("#cards").innerHTML = countryList;
+
     // const elementHTMLOuJeVeuxAfficherLesDonnees = 
 
     // elementHTMLOuJeVeuxAfficherLesDonnees.innerHTML = countryList;
